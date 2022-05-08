@@ -1,0 +1,13 @@
+[{
+    "_id": "6267d3498b0bfd1755e92237",
+    "name": "Ali",
+    "email": "123@123.com",
+    "password": "$2a$10$BIM.vI5vgbVwh0yrlM8y7egVH5lNLIXjuozW0wVYBBeO37jgcsH0O",
+    "avatar": {
+        "public_id": "avatars/kthcgxp4pt9th6eaxj5z",
+        "url": "https://res.cloudinary.com/dwdkba6xs/image/upload/v1651409214/avatars/kthcgxp4pt9th6eaxj5z.avif"
+    },
+    "role": "admin",
+    "createdAt": "2022-04-26T11:11:05.817Z",
+    "__v": 0
+}]
