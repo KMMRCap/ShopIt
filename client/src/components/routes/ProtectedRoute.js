@@ -11,7 +11,7 @@ const ProtectedRoute = () => {
             {user ?
                 <Outlet />
                 :
-                <Navigate to='/' />
+                <Navigate to='/login' />
             }
         </>
     )

@@ -17,7 +17,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 
 axios.get('/api/v1/stripeapi').then(result => {
-  store.dispatch(loadUser()).then((res) => {
+  store.dispatch(loadUser()).then(res => {
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
       <React.StrictMode>
@@ -27,7 +27,7 @@ axios.get('/api/v1/stripeapi').then(result => {
               <Elements stripe={loadStripe(result.data.stripeApiKey)}>
                 <App
                   stripeApiKey={result.data.stripeApiKey}
-                  isAdmin={res.payload.user.role === 'admin' ? true : false}
+                  isAdmin={res.payload?.user?.role === 'admin' ? true : false}
                 />
                 <ToastContainer autoClose={3000} position='top-center' />
               </Elements>

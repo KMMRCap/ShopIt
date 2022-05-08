@@ -135,12 +135,20 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
 // Get currently logged in user => /api/v1/me
 exports.getUserProfile = catchAsyncErrors(async (req, res, next) => {
 
-    const user = await User.findById(req.user.id)
+    if (req.user?.id) {
+        const user = await User.findById(req.user.id)
 
-    res.status(200).json({
-        success: true,
-        user
-    })
+        res.status(200).json({
+            success: true,
+            user
+        })
+    }
+    else {
+        res.status(200).json({
+            success: false,
+            user: undefined
+        })
+    }
 })
 
 // Update/Change password => /api/v1/password/update

@@ -151,6 +151,7 @@ const productSlice = createSlice({
             state.productsCount = action.payload.productsCount
             state.resPerPage = action.payload.resPerPage
             state.filteredProductsCount = action.payload.filteredProductsCount
+            state.product = {}
         },
         [getAllProducts.rejected]: (state) => {
             state.loading = false
