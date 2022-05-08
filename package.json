@@ -1,7 +1,7 @@
 {
-  "name": "27-shopit",
+  "name": "shopit",
   "version": "1.0.0",
-  "description": "",
+  "description": "an online shop using MERN stack development",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -9,9 +9,9 @@
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server/server",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon server/server",
     "client": "npm run start --prefix client",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
   },
-  "author": "",
+  "author": "Morteza Rezaeinia",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -30,5 +30,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.14.0"
   }
 }
